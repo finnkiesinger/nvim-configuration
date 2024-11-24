@@ -7,6 +7,7 @@ return {
   },
   config = function()
     local treesitter = require("nvim-treesitter.configs")
+    local nvim_ts_autotag = require("nvim-ts-autotag")
 
     treesitter.setup({
       highlight = { enable = true },
@@ -44,7 +45,9 @@ return {
           scope_incremental = false,
           node_decremental = "<bs>",
         },
-      }
+      },
     })
-  end
+
+    nvim_ts_autotag.setup()
+  end,
 }
