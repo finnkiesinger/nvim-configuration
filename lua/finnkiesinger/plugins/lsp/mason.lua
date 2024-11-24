@@ -44,7 +44,6 @@ return {
         "black",
         "pylint",
         "eslint_d",
-        "bacon",
       },
     })
   end,
