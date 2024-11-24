@@ -12,5 +12,5 @@ return {
     keymap.set("n", "ss", substitute.line, { desc = "Substitute line" })
     keymap.set("n", "S", substitute.eol, { desc = "Substitute to the end of line" })
     keymap.set("x", "s", substitute.visual, { desc = "Substitute in visual mode" })
-  end
+  end,
 }

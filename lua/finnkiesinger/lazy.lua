@@ -6,15 +6,15 @@ if not vim.loop.fs_stat(lazypath) then
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable",
-    lazypath
+    lazypath,
   })
 end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import =  "finnkiesinger.plugins" }, { import =  "finnkiesinger.plugins.lsp" } }, {
+require("lazy").setup({ { import = "finnkiesinger.plugins" }, { import = "finnkiesinger.plugins.lsp" } }, {
   change_detection = {
-    notify = false
+    notify = false,
   },
   checker = {
     enabled = true,
