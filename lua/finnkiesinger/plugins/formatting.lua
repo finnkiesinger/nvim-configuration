@@ -18,6 +18,7 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        vue = { "prettier" },
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },

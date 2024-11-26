@@ -93,9 +93,22 @@ return {
         })
       end,
       ["ts_ls"] = function()
+        local mason_registry = require("mason-registry")
+        local vue_server_language_path = mason_registry.get_package("vue-language-server"):get_install_path()
+          .. "/node_modules/@vue/language-server"
+
         lspconfig["ts_ls"].setup({
+          init_options = {
+            plugins = {
+              {
+                name = "@vue/typescript-plugin",
+                location = vue_server_language_path,
+                languages = { "vue" },
+              },
+            },
+          },
           capabilities = capabilities,
-          filetypes = { "typescriptreact", "typescript", "typescript.tsx" },
+          filetypes = { "typescriptreact", "typescript", "typescript.tsx", "vue" },
         })
       end,
 
@@ -117,5 +130,5 @@ return {
         })
       end,
     })
-  end
+  end,
 }
